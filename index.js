@@ -10,9 +10,13 @@ const trainingData = [
 
 const net = new brain.recurrent.LSTM();
 net.train(trainingData, {
-    iterations: 100,
+    iterations: 200,
     erroThresh: 0.011
 });
 
 console.log(net.run('I am unhappy!'));
 console.log(net.run('I am happy!'));
+
+// Output after several refreshes
+// index.js:17 sad
+// index.js:18 happy
